@@ -15,8 +15,10 @@ body {
 .navbar {
   position: fixed;
   background: #090f1b;
-  padding: 0.7em;
+  padding:1em  0em 0em 0em;
   display:flex;
+  box-shadow: 0px 0px 12px #415577;
+  width: max(49em);
 }
 .navbar .logo {
   position: relative;
@@ -28,35 +30,23 @@ body {
   color: white;
   font-size: 1em;
   display: flex;
-  width:8em;
+
   padding: 0px;
   z-index: 1;
 }
-
-.navbar .logo span {
-  color: var(--primary-color);
-
-}
-
 nav {
-  display: none;
-}
-.navbar .mobile-menu {
-  cursor: pointer;
   display: flex;
   position: fixed;
   background-color:white;
-  left: 18em;
 }
 .navbar .container  a{
-  top:0%
-  fixed
+  display: block;
+  text-align: left;
+  font-size: 1em;
 }
 .navbar .container {
   display: flex;
-  margin: -0.1em;
-  padding-right: 15em;
-  padding-bottom: -1em;
+  margin: 0em;
 }
 .navbar nav {
   display: none;
@@ -64,9 +54,7 @@ nav {
 .navbar nav li a {
   display: flex;
   color: white;
-  position: relative;
-  top: 4px;
-  z-index: 2;
+  z-index: 1;
 }
 ul {
   list-style-type: none;
@@ -75,20 +63,13 @@ ul {
 }
 .hero .container{
   display: flex;
-  position:fixed;
-  top: 0em;
-  left:- 10vw;
-  padding: 1em 0em;
-  z-index: -1;
+
 }
 
 .hero-img {
   position:relative;
-  border-image: auto;
-  top: 0em;
-  left: 0px;
-  margin-left: -3.7em;
-  width: 70%;
+  margin-left: 0em;
+  width: max(40vw);
   z-index: -1;
 
 }
@@ -96,7 +77,7 @@ ul {
   display: block;
   position: relative;
   left: -14rem;
-  bottom:-0.5em;
+  bottom: -0.6em;
   z-index: -1;
 }
 
@@ -106,8 +87,7 @@ ul {
   font-size: 1.3rem;
   line-height: 1.3em;
   top: 3.9rem;
-  left: 7em;
-  padding: 0em;
+  left: 6em;
   text-align: center;
 }
 .hero-txt .primary-cta {
@@ -118,37 +98,33 @@ ul {
   font-size: 1.0rem;
   border-radius: 5em;
   top: 4em;
-  left:11em;
+  left:12em;
   font-weight: bold;
   display: inline-block;
 }
-.hero .container hr {
+.hero .container hr{
   background-color: #ffff;
   position: relative;
   margin-left:0em;
-  width: 14.5em;
-  top:7.4rem;
+  width: max(17em);
+  margin-top: 7.5em;
 }
 
 .features-section {
-  display: block;
-  position: relative;
-  top:57.5vh;
-  justify-self: center;
+  margin-top:-3.88em;
+  
 }
-
 .features-section .container {
+  overflow: hidden;
   display: grid;
   position: relative;
-  top:0em;
   grid-template-columns: 1fr 1fr;
-  grid-column-gap: 1em;
   grid-row-gap: 1em;
   justify-content: center;
-  grid-template-rows: 12em 12em ;
   z-index: -1;
-  width: 100%;
-  background:linear-gradient(#090f1b, black );
+  width: max(100.5vw);
+  padding: 0.7vw;
+  background:none;
 }
 .features-section .cta-btn {
   cursor: pointer;
@@ -156,7 +132,7 @@ ul {
   position:relative;
   font-weight:bolder;
   font-size: 1rem;
-  border-radius: 30em;
+  border-radius: 20em;
   height: 2em;
   width:9rem;
   top: 0vh;
@@ -165,27 +141,48 @@ ul {
   color: white;
   background-color: #090f1b;
   z-index: -1;
+  box-shadow: 0px 0px 5px #090f1b;
+}
+
+.features-section .container .g{
+  text-decoration: none;
+  cursor: pointer;
 }
 .features-section .cta-btn span {
   color: var(--primary-color);
 }
 .features-section .container .thumbnail {
-  margin-left: 0.2em;
   padding-left: 0.5em;
   padding-right: 0.5em;
   vertical-align: top;
   display: inline-block;
   margin-top: 1.5em;
 }
+
+.features-section .container a {
+  background: #20272E;
+}
+.features-section .container h5 {
+  font-size: 0.7em;
+}
+
+.features-section .container h6 {
+  color: #818489;
+  font-size: 0.5em;
+  text-align:left;
+  margin-top: -3vh;
+}
+
 .features-section .container img {
   display: block;
   margin-top: 0em;
   margin-left: 0em;
   border-radius: 20%;
-  height: 8em;
-  width: 100%;
-  opacity: 0.6;
+  height: 20vw;
+  width: 40vw;
+  opacity: 0.7;
 }
+
 .features-section .container blockquote {
   margin-left: 0.5em;
   text-decoration:none;
@@ -193,22 +190,16 @@ ul {
   color: aliceblue;
 }
 
-.features-section img {
-  display: none;
-}
 .testimonial-section {
-  position: relative;
-  top: 75vh;
-  background-color: black;
-
+  margin-top: 6vh;
+  align-content:center;
+  width: max(19vw);
 }
 .testimonial-section .container {
-  background-color: black;
   display:flex;
+}
 
-   }
 .testimonial-section ul img {
-  background-color: black;
   display: flex;
   position: relative;
   left:5.5em;
@@ -218,22 +209,25 @@ ul {
   border-radius: 50%;
   margin-top: -4.5em;
    }
-  
+
 
 .testimonial-section ul {
   position: absolute;
-  background: var(--primary-color);
+  background:#090f1b;
   text-align: center;
   padding: 2em 0em 2em;
   margin:1rem 1rem 1rem 1rem;
   width: 18em;
   height: 8em;
   border-radius: 1em;
+  color: white;
 }
 .testimonial-section blockquote {
+  color: white;
   font-size: smaller;
 }
 .testimonial-section button{
+  position: relative;
   margin-top:7.3em;;
   opacity: .5;
   width: 2em;
@@ -242,24 +236,21 @@ ul {
 }
 .testimonial-section .btn-slide1 {
   display: flex;
-  position: absolute;
+  position: relative;
   left: 0.9em;
 }
 .testimonial-section .btn-slide2 {
   display: flex;
-  position: absolute;
-  right:0.9em;
-}
-.testimonial-section .container .slides {
-  display: none;
+  position: relative;
+  right:-19.2em;
 }
 
 
 .footer-section div {
   display: flex;
-  font-size: 0.7em;
-  position: relative;
-  top:55em;
+  font-size: 0.5em;
+  padding-top: 2em;
+  margin-top: 10em;
   left: -2.5em;
   color: aliceblue;
   z-index: -1;
@@ -268,8 +259,9 @@ ul {
 @media (max-width: 425px) {
   nav.menu-btn {
     display: block;
-  }
   
+  }
+
   nav {
     position: fixed;
     z-index: 1;
@@ -278,11 +270,10 @@ ul {
     top: 0;
     background: #20272E;
     height: 100vh;
-    padding: 1em;
   }
   nav ul.primary-nav {
     margin-top: 5em;
-  
+
   }
   nav li a {
     color: white;
@@ -295,88 +286,16 @@ ul {
   nav li a:hover {
     font-weight: bold;
   }
-  
+
   .mobile-menu-exit {
     float: right;
-    margin: 0.5em;
     cursor: pointer;
   }
 
 }
 
 @media only screen and (min-width: 768px) {
-  .mobile-menu-exit {
-    display: none;
-  }
-  .navbar .mobile-menu {
-    display: none;
-  }
-  .navbar {
-    display: fixed;
-    width: 30em;
-    padding: 0em;
-
-  }
-
-  .navbar .container {
-    display:flexbox;
-    width: auto;
-    height: auto;
-    margin: 0em;
-    grid-template-columns: 180px auto;
-    justify-content: space-between;
-  }
-  .navbar nav {
-    display: flex;
-    justify-content: space-between;
-    background: #090f1b;
-    position: relative;
-    height: auto;
-    margin-left: 4em;
-    width: 100%;
-    padding: 0em;
-  }
-  .navbar nav a {
-    color: white;
-    font-size: 1em;
-    padding: 0.1em 1em;
-  }
-  .navbar .logo  {
-    display: flex;  
-    font-weight: bolder;
-    color: white;
-    font-size: 1.9em;
-    display: flex;
-    width:4em;
-    padding-left: 5px;
-    padding-top: 2px;
-    
-  }
- .navbar nav ul {
-    display: flex;
-    width: 35em;
-    position: relative;
-    top: 7px;
-    right: 1em;
-  }
-  .navbar nav ul.primary-nav {
-    margin-left: 4em;
-    margin-top: 0em;
-    width: 100%;
-    
-  }
-  .secondary-nav {
-    display: flex;
-    margin-left: 4em;
-    margin-bottom: 0px;
-  }
-  .navbar nav li.current a {
-    font-weight: bold;
-  }
-  .navbar nav li.contact-us-cta a {
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
-    font-weight: bold;
+nav li a:hover {
     border-radius: 5em;
     margin-top: 1em;
     position: relative;
@@ -384,151 +303,9 @@ ul {
   }
 
 
-  .navbar nav li.contact-us-cta a:hover {
-    background: var(--primary-color);
-    color: white;
-  }
-  section .hero {
-    display: inline;
-    position: relative;
-    top: 40%;
-  }
-  .hero .container {
-    display: flexbox;
-    justify-content: space-between;
-    text-align: left;
-  }
-  .hero-img{
-    margin-top: 1em;
-    margin-left:-4em;
-  }
-  .hero-txt h1 {
-    font-size: 2.5em;
-    line-height: 1.3em;
-    margin-top: 0.0em;
-  }
-  .left-col {
-    margin: 0em;
-  }
-  
-}
-@media only screen and (min-width: 1080px) {
-  .container {
-    width: 1080px;
-    margin: 0 auto;
-  }
-  section {
-    padding: 10em 4em;
-  }
-  .navbar .logo {
-    position:sticky;
-    margin-top: auto;
-    left: 0em;
-  }
-  .hero .container {
-    display: flex;
-    justify-content: space-between;
-    text-align: left;
-  }
-  .hero .container .hero-txt {
-    margin-top: 26em;
-    margin-left:-20em;
-  }
-  .hero .container .hero-txt h1 {
-    font-size: 6em;
-    width: 100%;
-  }
-  .hero-img {
-    width:800px;
-    height: 45em;
-    right: 1em;
-    top: 0;
-  }
-  .hero-cta {
-    display: flex;
-    margin-top: -3em;
-    margin-left: 11em;
-  }
-
-  .features-section .container {
-    display: grid;
-    justify-content: space-between;
-    margin-left: -2.6em;
-    width: 90em;
-    grid-template-columns: 1fr 1fr ;
-    position: relativ;
-    top:20em;
-  }
-  
-  .features-section .thumbnail {
-    vertical-align: top;
-    display: inline-block;
-  }
-  .features-section a {
-    text-decoration: none;
-    color: #090f1b;
-  }
-  .features-section  img {
-    display: inline-block;
-    border-radius: 20%;
-  
-  }
-  .features-section .container blockquote {
-    margin-block:inherit;
-    margin-left: 1em;
-    text-decoration: none;  
-  }
-  
-  .testimonials-section ul {
-    display: flex;
-  }
-  .testimonials-section ul li {
-    margin: 0 1em;
-  }
-  .contact-section {
-    position: relative;
-  }
-  .contact-section .container {
-    display: flex;
-  }
-  .contact-right {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 45%;
-    height: 100%;
-  }
-}
-@media only screen and (min-width: 1450px) {
-  .features-section:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 50em;
-    background:#090f1b;
-    top: 43em;
-    left: 0;
-    bottom: 0em;
-    z-index: -1;
-  }
-  .navbar {
-    display: flex;
-    place-content: space-between;
-  }
-  .features-section:after {
-    content: "";
-    position: absolute;
-    width: 200px;
-    height: 20em;
-    background: url("images/dots.svg") no-repeat;
-    right: 0em;
-    bottom: -11.5em;
-    animation-name: mover;
-    animation-duration: 5s;
-    animation-direction: alternate-reverse;
-    animation-iteration-count: infinite;
-  }
+ nav li a:hover {
   @keyframes mover {
     0%{right:150px}
   }
+}
 }
