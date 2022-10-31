@@ -8,48 +8,53 @@ html{
 }
 body {
   background: #8cb0ed;
-  width: 20rem;
+
   margin: 0px;
   font-family: "Poppins";
 }
+
+
 .navbar {
   position: fixed;
   background: #090f1b;
-  padding:1em  0em 0em 0em;
+  justify-content:space-between;
+  padding:0em  0.2em;
   display:flex;
-  box-shadow: 0px 0px 12px #415577;
-  width: max(49em);
+  box-shadow: 0px 0px 20px #03112a;
+  width: 100vw;
 }
-.navbar .logo {
-  position: relative;
+
+.mobile-menu {
+  background-color: antiquewhite;
+  display: flex;
+  margin-left: 8em;
+  padding-bottom: 0.05em;
+  cursor: pointer;
+  justify-content:flex-end;
+}
+
+ .logo {
   background-color: #090f1b;
-  margin-left:0em;
-  margin-top: -0.5em;
+  right: 0em;
   text-decoration: none;
   font-weight: bolder;
   color: white;
   font-size: 1em;
-  display: flex;
-
-  padding: 0px;
+  display: block;
   z-index: 1;
 }
-nav {
-  display: flex;
-  position: fixed;
-  background-color:white;
+
+.logo span{
+  color: var(--primary-color);
 }
-.navbar .container  a{
-  display: block;
-  text-align: left;
-  font-size: 1em;
-}
+
 .navbar .container {
   display: flex;
   margin: 0em;
 }
 .navbar nav {
   display: none;
+  
 }
 .navbar nav li a {
   display: flex;
@@ -58,36 +63,37 @@ nav {
 }
 ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
 }
 .hero .container{
   display: flex;
+  width: max(20em);
 
 }
 
 .hero-img {
-  position:relative;
-  margin-left: 0em;
-  width: max(40vw);
+  margin-left: -1em;
+  width: max(53vw);
+  height: 21em;
   z-index: -1;
-
+  filter: blur(8px);
+  -webkit-filter: blur(0.9px);
 }
 .hero-txt {
-  display: block;
+  margin-left:-4.5em;
   position: relative;
-  left: -14rem;
-  bottom: -0.6em;
-  z-index: -1;
+  bottom: -3em;
+  left:0.1em;
+  z-index: 1;
 }
 
 .hero-txt h1 {
   color: white;
   position: relative;
-  font-size: 1.3rem;
+  font-size: 1.5em;
   line-height: 1.3em;
-  top: 3.9rem;
-  left: 6em;
+  top: 3.5rem;
+  left: 0.8em;
+  width: max-content;
   text-align: center;
 }
 .hero-txt .primary-cta {
@@ -95,23 +101,23 @@ ul {
   position: relative;
   text-decoration: none;
   padding: 0.6em 0em;
-  font-size: 1.0rem;
+  font-size: 1.0em;
   border-radius: 5em;
-  top: 4em;
-  left:12em;
+  top: 3em;
+  left:3em;
   font-weight: bold;
   display: inline-block;
 }
 .hero .container hr{
+  display: none;
   background-color: #ffff;
   position: relative;
   margin-left:0em;
   width: max(17em);
-  margin-top: 7.5em;
 }
 
 .features-section {
-  margin-top:-3.88em;
+  margin-top:-1.5em;
   
 }
 .features-section .container {
@@ -123,7 +129,7 @@ ul {
   justify-content: center;
   z-index: -1;
   width: max(100.5vw);
-  padding: 0.7vw;
+  padding: 0.5vw;
   background:none;
 }
 .features-section .cta-btn {
@@ -131,12 +137,12 @@ ul {
   display: block;
   position:relative;
   font-weight:bolder;
-  font-size: 1rem;
+  font-size: 1.1rem;
   border-radius: 20em;
   height: 2em;
   width:9rem;
   top: 0vh;
-  left: 10em;
+  left: 5em;
   border-color: azure;
   color: white;
   background-color: #090f1b;
@@ -144,8 +150,7 @@ ul {
   box-shadow: 0px 0px 5px #090f1b;
 }
 
-.features-section .container .g{
-  text-decoration: none;
+.features-section .container{
   cursor: pointer;
 }
 .features-section .cta-btn span {
@@ -155,12 +160,15 @@ ul {
   padding-left: 0.5em;
   padding-right: 0.5em;
   vertical-align: top;
-  display: inline-block;
+  display: flex;
   margin-top: 1.5em;
 }
 
 .features-section .container a {
-  background: #20272E;
+  text-decoration: none;
+  background-color: #090f1b;
+  border-radius: 20%;
+  justify-content: center;
 }
 .features-section .container h5 {
   font-size: 0.7em;
@@ -175,12 +183,10 @@ ul {
 
 .features-section .container img {
   display: block;
-  margin-top: 0em;
-  margin-left: 0em;
-  border-radius: 20%;
   height: 20vw;
-  width: 40vw;
-  opacity: 0.7;
+  width: 46vw;
+  opacity: 1;
+  border-radius: 20%;
 }
 
 .features-section .container blockquote {
@@ -191,21 +197,23 @@ ul {
 }
 
 .testimonial-section {
-  margin-top: 6vh;
-  align-content:center;
-  width: max(19vw);
+  margin-top: 16vh;
+  display: flex;
+  justify-content:space-between;
+  width: max(4em);
 }
 .testimonial-section .container {
   display:flex;
+  margin-left: 0em;
 }
 
 .testimonial-section ul img {
   display: flex;
   position: relative;
-  left:5.5em;
+  left:6em;
   width:  5em;
   height: 5em;
-  border: 5px solid #0068d6;
+  border: 2px solid #0068d6;
   border-radius: 50%;
   margin-top: -4.5em;
    }
@@ -214,6 +222,7 @@ ul {
 .testimonial-section ul {
   position: absolute;
   background:#090f1b;
+  background-position: center;
   text-align: center;
   padding: 2em 0em 2em;
   margin:1rem 1rem 1rem 1rem;
@@ -250,7 +259,7 @@ ul {
   display: flex;
   font-size: 0.5em;
   padding-top: 2em;
-  margin-top: 10em;
+  margin-top: 13em;
   left: -2.5em;
   color: aliceblue;
   z-index: -1;
@@ -265,11 +274,10 @@ ul {
   nav {
     position: fixed;
     z-index: 1;
-    width: 66%;
     right: 0;
     top: 0;
     background: #20272E;
-    height: 100vh;
+
   }
   nav ul.primary-nav {
     margin-top: 5em;
