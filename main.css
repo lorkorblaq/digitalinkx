@@ -18,6 +18,7 @@ body {
   position: fixed;
   background: #090f1b;
   justify-content:space-between;
+  padding-top: 0.5em;
   padding:0em  0.2em;
   display:flex;
   box-shadow: 0px 0px 20px #03112a;
@@ -28,7 +29,7 @@ body {
   background-color: antiquewhite;
   display: flex;
   margin-left: 8em;
-  padding-bottom: 0.05em;
+  padding-bottom: 0em;
   cursor: pointer;
   justify-content:flex-end;
 }
@@ -66,6 +67,7 @@ ul {
 }
 .hero .container{
   display: flex;
+  margin-top: 0em;
   width: max(20em);
 
 }
@@ -83,7 +85,7 @@ ul {
   position: relative;
   bottom: -3em;
   left:0.1em;
-  z-index: 1;
+  z-index: -1;
 }
 
 .hero-txt h1 {
@@ -205,6 +207,7 @@ ul {
 .testimonial-section .container {
   display:flex;
   margin-left: 0em;
+  z-index: -1;
 }
 
 .testimonial-section ul img {
@@ -267,16 +270,22 @@ ul {
 
 @media (max-width: 425px) {
   nav.menu-btn {
+    position: fixed;
     display: block;
-  
+  }
+  .mobile-menu-exit {
+    float: right;
+    position: relative;
+    cursor: pointer;
+    left: -1.2em;
   }
 
   nav {
     position: fixed;
     z-index: 1;
-    right: 0;
-    top: 0;
-    background: #20272E;
+    right: 0em;
+    top: 0em;
+    background: #03112a;
 
   }
   nav ul.primary-nav {
@@ -288,28 +297,42 @@ ul {
     text-decoration: none;
     display: block;
     padding: 0.5em;
-    font-size: 1.3em;
+    font-size: 1em;
     text-align: right;
   }
   nav li a:hover {
     font-weight: bold;
   }
-
-  .mobile-menu-exit {
-    float: right;
-    cursor: pointer;
-  }
-
 }
 
 @media only screen and (min-width: 768px) {
-nav li a:hover {
+  nav li a:hover {
     border-radius: 5em;
     margin-top: 1em;
     position: relative;
     top:10px;
   }
+   .navbar .container nav  {
+    display: inline-flex;
+    justify-content: center;
+    text-decoration: none;
+    padding-left: 0em;
+  }
+  .secondary-nav {
+    display: flex;
+  }
 
+  .navbar li {
+    display: inline-flex;
+    font-size: 1.3em;
+    
+  }
+  .navbar hr {
+    display: none;
+  }
+ .mobile-menu-exit, .mobile-menu{
+    display: none;
+  }
 
  nav li a:hover {
   @keyframes mover {
