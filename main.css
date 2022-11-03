@@ -8,11 +8,12 @@ html{
 }
 body {
   background: #8cb0ed;
-
   margin: 0px;
   font-family: "Poppins";
 }
-
+body::-webkit-scrollbar{
+  display: none;
+}
 
 .navbar {
   position: fixed;
@@ -23,16 +24,17 @@ body {
   display:flex;
   box-shadow: 0px 10px 70px #03112a;
   width: 100vw;
-  height: 7vh;
+  height: 5vh;
+  z-index: 2;
 }
 
 .mobile-menu {
   background-color: antiquewhite;
   display: flex;
-  margin-left: 8em;
-  padding-bottom: 0em;
+  margin-left: 5em;
   cursor: pointer;
   justify-content:flex-end;
+  width: 2em;
 }
 
  .logo {
@@ -41,7 +43,7 @@ body {
   text-decoration: none;
   font-weight: bolder;
   color: white;
-  font-size: 1em;
+  font-size: 1.2em;
   display: block;
   z-index: 1;
 }
@@ -122,9 +124,10 @@ ul {
 
 .features-section {
   margin-top:-1.5em;
-  background-color: white;
+  background-color: #090f1b;
   z-index: -1;
   padding-bottom: 10vw;
+  width: max(100vw);
   
 }
 .features-section .container {
@@ -134,8 +137,6 @@ ul {
   grid-template-columns: 1fr;
   grid-row-gap: 4em;
   justify-content: center;
-  z-index: 1;
-  width: max(100vw);
   padding: 0.5vw;
   background:none;
 }
@@ -177,31 +178,34 @@ ul {
 
 .features-section .container a {
   text-decoration: none;
-  background-color: #090f1b;
+  background-color: white;
   border-radius: 20%;
   justify-content: center;
-
 }
 .features-section .container h5 {
   font-size: 1.2em;
   text-align: center;
+  margin-top: -2vh;
+  margin-left: 2em;
 }
 
 .features-section .container h6 {
-  color: #818489;
+  color: #090f1b;
   font-size: 0.8em;
   text-align:center;
   margin-top: -3vh;
+  margin-left: 2em;
 }
 
 .features-section .container img {
   display: block;
-  height: 20vh;
+  height: 25vh;
   width: 90vw;
   opacity: 1;
-  border-color: #090f1b;
+  border-color: var(--primary-color);
   border-style: double;
   border-width: 0.15em;
+  margin-bottom: 0em;
 
 }
 
@@ -209,7 +213,7 @@ ul {
   margin-left: 0.5em;
   text-decoration:none;
   font-size: small;
-  color: white;
+  color: #090f1b;
   text-align: center;
 }
 
@@ -322,6 +326,10 @@ ul {
 
 @media only screen and (min-width: 768px) {
 
+  .navbar  {
+    padding-bottom: 2.1em;
+  }
+
   nav li a:hover {
     border-radius: 0em;
     margin-top: 0em;
@@ -331,24 +339,23 @@ ul {
     font-weight: bolder;
   }
   .navbar .container .logo {
-    font-size: 6em;
+    margin-top: 0.3em;
+    font-size: 2vw;
   }
    .navbar .container nav  {
     display: inline-flex;
     justify-content: center;
     text-decoration: none;
-    
     padding-left: 0em;
-
-
+    padding-top: 1em;
   }
   .secondary-nav {
     display: flex;
   }
 
-  .navbar nav li {
+  .navbar nav li  {
     display: inline-flex;
-    font-size: 4em;
+    font-size: 1.1vw;
     justify-content: space-between;
     padding-left: 2em;
     padding-right: 0.9em;
@@ -385,15 +392,44 @@ ul {
     display: none;
     position: relative;
     font-size: 3vw;
-    top: -10vw;
+    top: -6vw;
     left:-48vw;
   }
    .features-section {
+    display: grid;
+    width: 100vw;
     margin-top:-10em;
-    background-color: white;
     z-index: -1;
     padding-bottom: 10vw;
   } 
+
+  .features-section .container {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 10em;
+    grid-column-gap: 10em;
+    justify-content: center;
+    z-index: 1;
+    width:99vw;
+    padding: 0.5vw;
+    background:none;
+  }
+
+   .features-section .thumbnail {
+    position: relative;
+    left: 4em;
+
+   }
+
+   .features-section .container blockquote {
+    font-size: 2rem;
+   }
+   .features-section .container h5::after {
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
    .features-section .cta-btn{
     font-size: 3.5vw;
     width: 22vw;
@@ -408,8 +444,6 @@ ul {
   }
   .features-section .cta-btn span {
     animation: x 1.6s infinite;
-  
-  
   }
 
   @keyframes x {
@@ -423,31 +457,73 @@ ul {
       top:-0.3em;
       font-size:2em;
     }
-
-
-
-
-
-
     
   }
 
+  .features-section .container img {
+    width: 40vw;
+  }
   .features-section .vrt{
     height:3px;
-    background-color: #03112a;
+    background-color: white;
     z-index: 1;
   }
-  .features-section .container {
-    overflow: hidden;
-    display: grid;
-    position: relative;
-    grid-template-columns: 1fr;
-    grid-row-gap: 4em;
-    justify-content: center;
-    z-index: 1;
-    width: max(100vw);
-    padding: 0.5vw;
-    background:none;
-}
+  .testimonial-section {
+    margin-top: 16vh;
+    display: flex;
+    justify-content:space-between;
+    width: 90vw;
 
+  }
+  .testimonial-section .container {
+    margin-left: 10em;
+    width: 60vw;
+    z-index: -1;
+  }
+  
+  .testimonial-section ul img {
+    position: relative;
+    left:-10em;
+    width:  20vw;
+    height: 22em;
+    border: 2px solid #0068d6;
+    border-radius: 50%;
+    margin-top: -9em;
+     }
+  
+  
+  .testimonial-section ul {
+    position: relative;
+    background:#090f1b;
+    background-position: center;
+    text-align: center;
+    padding: 2em 0em 2em;
+    margin:1rem 1rem 1rem 1rem;
+    width: 50vw;
+    height: 50vh;
+    border-radius: 1em;
+    color: white;
+  }
+  .testimonial-section blockquote, cite {
+    color: white;
+    font-size: 5em;
+  }
+  .testimonial-section button{
+    position: relative;
+    margin-top:7em;;
+    opacity: .5;
+    width: 2em;
+    background-color: #090f1b;
+    color: #8cb0ed;
+  }
+  .testimonial-section .btn-slide1 {
+    display: flex;
+    position: relative;
+    left: 0.9em;
+  }
+  .testimonial-section .btn-slide2 {
+    display: flex;
+    position: relative;
+    right:-19.2em;
+  }
 }
