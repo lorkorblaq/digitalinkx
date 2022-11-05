@@ -259,19 +259,19 @@ body::-webkit-scrollbar{
   margin-top:7.3em;;
   opacity: .5;
   width: 2em;
-  margin-left: -8em;
+  margin-left: -10em;
   background-color: #090f1b;
   color: #8cb0ed;
 }
 .testimonial-section .btn-slide1 {
   display: flex;
   position: relative;
-  left: -3em;
+  left: -2.5em;
 }
 .testimonial-section .btn-slide2 {
   display: flex;
   position: relative;
-  right:-23em;
+  right:-25.9em;
 }
 
 
