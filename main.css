@@ -13,7 +13,7 @@ body {
   width: 100vw;
 }
 body::-webkit-scrollbar{
-  display: none;
+  display:none;
 }
  .logo {
   right: 0em;
