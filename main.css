@@ -67,8 +67,10 @@ body {
 
 .hero-txt  h1 {
   color: white;
+  display: flex;
   position: relative;
   font-size: 4vw;
+  justify-content:left;
   line-height: 1.3em;
   top: 3em;
   width: max-content;
@@ -92,6 +94,7 @@ body {
   z-index:2;
   margin-left: -0.5em;
   width:98vw;
+  box-shadow: 60px 20px 40px black;
   
 }
 .features-section .container {
@@ -518,6 +521,12 @@ body {
   color: black;
   z-index: +2;
   font-size: 1.4em;
+}
+.footer-section .endcta{
+  display: block;
+  background-color: #0068d6;
+  margin: 0em;
+  padding: 0em;
 }
 .footer-section button {
   position: relative;
