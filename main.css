@@ -260,12 +260,12 @@ body {
   position: relative;
   right:-25.9em;
 }
-.footer-section h8 {
+.footer-section .ctamail {
   display: flex;
   position: relative;
-  bottom: -8em;
+  top: 10em;
   left:3.3em;
-  font-size: 0.9em;
+  font-size: 1em;
 }
 .footer-section textarea {
   display: flex;
@@ -374,9 +374,9 @@ body {
     position: relative;
     left: 4em;
    }
-   .features-section .thumbnail::before {
-    
-   }
+  
+  
+  
 
    .features-section .container blockquote {
     font-size: 2rem;
@@ -500,18 +500,17 @@ body {
     position: relative;
     right:-19.2em;
   }
-}
-.footer-section h8 {
+
+.footer-section .ctamail {
   display: flex;
-  position: relative;
-  bottom: -1em;
-  left:30vw;
-  font-size: 3em;
+  position: relative;;
+  top: 7em;
+  left:38vw;
+  font-size: 1.5em;
 }
 .footer-section textarea {
   display: flex;
   position: relative;
-
   width: 20vw;
   height: 3vh;
   margin-bottom: 10em;
@@ -523,8 +522,8 @@ body {
 .footer-section button {
   position: relative;
   display: flex;
-  margin-left: 36.1em;
-  margin-top: -8.79em;
+  margin-left: 37.7em;
+  margin-top: -8.80em;
   font-size: 1.3em;
   font-weight:bolder;
   color: black;
@@ -533,4 +532,5 @@ body {
   height: 1.6em;
   border-color: red;
   background:red;
+}
 }
